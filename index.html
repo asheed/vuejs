@@ -2,17 +2,15 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>index</title>
-
 </head>
 <body>
     <div id="app">
-        <h1 v-if="value > 5">value가 5보다 크군요!</h1>
-        <h1 v-else-if="value === 5">값이 5네요...</h1>
-        <h1 v-else>value가 5보다 작아요!</h1>
-        <h1 v-pre>{{ 이건 그대로 렌더링해줘요 }}</h1>
-        <h2 v-once>초기 값: {{ value }}</h2>
-        <h2>현재 값: {{ value }}</h2>
+        <h1>Hello, {{ name }} </h1>
+        <h2>{{ Date() }}</h2>
+        <!--<img v-bind:src="feelsgood"/>-->
+        <img v-bind:src="smile ? feelsgood : feelsbad"/>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -22,7 +20,10 @@
             el: '#app', // 어떤 엘리먼트에 적용을 할지 정의함
             // data는 해당 뷰에서 사용할 정보를 가지고 있습니다.
             data: {
-                value: 0
+                name: 'Vue',
+                smile: true,
+                feelsgood: 'https://imgh.us/feelsgood_1.jpg',
+                feelsbad: 'http://imgh.us/feelsbad.jpg'
             }
         });
     </script>
