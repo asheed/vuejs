@@ -7,15 +7,19 @@
 </head>
 <body>
     <div id="app">
-        {{ message }}
+        <h1>Hello
+            <span v-text="name"></span>
+        </h1>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script>
+        // 새로운 뷰를 정의
         var app = new Vue({
-            el: '#app',
+            el: '#app', // 어떤 엘리먼트에 적용을 할지 정의함
+            // data는 해당 뷰에서 사용할 정보를 가지고 있습니다.
             data: {
-                message: '안녕하세요 Vue!'
+                name: '<i>이탈릭</i>'
             }
         });
     </script>
