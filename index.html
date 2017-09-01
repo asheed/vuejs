@@ -7,9 +7,7 @@
 </head>
 <body>
     <div id="app">
-        <h1>Hello
-            <span v-html="name"></span>
-        </h1>
+        <h1 v-if="value > 5">value가 5보다 크군요!</h1>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -19,7 +17,7 @@
             el: '#app', // 어떤 엘리먼트에 적용을 할지 정의함
             // data는 해당 뷰에서 사용할 정보를 가지고 있습니다.
             data: {
-                name: '<i>이탈릭</i>'
+                value: 0
             }
         });
     </script>
